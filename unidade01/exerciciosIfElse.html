@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de condição</title>
+    <script>
+
+        function calcular() {
+
+            const nota1 = document.getElementById("nota1").value;
+            const nota2 = document.getElementById("nota2").value;
+            const nota3 = document.getElementById("nota3").value;
+            const nota4 = document.getElementById("nota4").value;
+
+
+            const soma = Number(nota1) + Number(nota2) + Number(nota3) + Number(nota4);
+            const media = soma / 4;
+
+            if (media >= 7) {
+                const resultado = document.getElementById("resultado").innerHTML = (`Sua média é ${media} pontos. Você foi aprovado(a).`);
+            } else if (media >= 5) {
+                const resultado = document.getElementById("resultado").innerHTML = (`Sua média é ${media} pontos. Você ficou em recuperação.`);
+            } else {
+                const resultado = document.getElementById("resultado").innerHTML = (`Sua média é ${media} pontos. Você foi reprovado(a).`);
+            }
+        }
+
+
+
+
+    </script>
+</head>
+
+<body>
+    Nota 1: <input type="text" id="nota1" /> <br>
+    Nota 2: <input type="text" id="nota2" /> <br>
+    Nota 3: <input type="text" id="nota3" /> <br>
+    Nota 4: <input type="text" id="nota4" /> <br>
+    <input type="button" value="Calcular" onclick="calcular()" />
+
+    <h1 id="resultado">Calcule sua média e saiba se você foi aprovado(a).</h1>
+
+</body>
+
+</html>
